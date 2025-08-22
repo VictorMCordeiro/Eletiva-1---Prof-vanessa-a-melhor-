@@ -9,7 +9,7 @@
   <body>
     <h1>Ex 1</h1>
 
-    <form method="post">           
+    <form method="post" action ="respos_ex1.php">           
         <div class="mb-3">
             <label for="valor1" class="form-label">informe o primeiro valor</label>
             <input type="number" id="valor1" name="valor1" class="form-control" required="">
@@ -29,9 +29,9 @@
         $valor2 = $_POST['valor2'];
         $Soma = $valor1 + $valor2;
         echo "<p> Soma = $Soma</p>";
-      }
+      }// teste de comit
     ?>
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
