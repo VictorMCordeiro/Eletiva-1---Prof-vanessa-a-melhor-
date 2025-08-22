@@ -29,7 +29,7 @@
         $valor2 = $_POST['valor2'];
         $Soma = $valor1 + $valor2;
         echo "<p> Soma = $Soma</p>";
-      }// teste de comit
+      }// teste de comit ..,
     ?>
     
 
