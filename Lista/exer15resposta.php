@@ -7,17 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body class="content mt-4">
-    <h1>Resposta do exercicio 14</h1>
+    <h1>Resposta do exercicio 15</h1>
         <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') // ESSE VAI TER EM TODOS OS EXERCICIOS
         {
             try {
-                $km = $_POST['km'];
-                $r = $km * 0.621371;
-
-                // Limita o resultado para 2 casas decimais
-                $r_formatado = number_format($r, 2, ',', '.');
-                echo "$km kilometro(s) são $r_formatado Milhas(s) <br>";
+                $kg = $_POST['kg'];
+                $a = $_POST['al'];
+                $imc = $kg / (float)$a**2;
+                $imc_f = number_format($imc, 2, ',', '.');
+                echo "Para o poso $kg e altura $a, o IMC é $imc_f<br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {
                 echo $e->getMessage();
