@@ -10,23 +10,23 @@
 </head>
 
 <body class="container mt-4">
-  <h1>Exercicio 15</h1>
-  <h2>Crie um formulário que permita ao usuário inserir seu peso (em kg) e altura (em metros). O
-    script PHP deve calcular o IMC (peso / altura²) e exibir o resultado.</h2>
+  <h1>Exercicio 16</h1>
+  <h2>Crie um formulário que permita ao usuário inserir um preço e um percentual de desconto. O
+script PHP deve calcular o preço com desconto e exibir o resultado.</h2>
 
-  <form method="post" action="exer15resposta.php">
+  <form method="post" action="exer16resposta.php">
     <div class="row">
       <div class="mb-3 col-3">
-        <label for="m" class="form-label">Insira peso (kg) </label>
-        <input type="number" id="km" name="kg" class="form-control" required="" placeholder="">
+        <label for="m" class="form-label">Insira PREÇO </label>
+        <input type="number" id="km" name="p" class="form-control" required="" placeholder="">
       </div>
       <div class="mb-3 col-3">
-        <label for="m" class="form-label">Insira altura (metros) </label>
-        <input type="text" id="km" name="al" class="form-control" required="" placeholder="">
+        <label for="m" class="form-label">Insira Percentual de desconto </label>
+        <input type="text" id="km" name="pd" class="form-control" required="" placeholder="">
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Calcular IMC</button>
+    <button type="submit" class="btn btn-primary">Calcular</button>
   </form>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
