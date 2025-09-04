@@ -15,6 +15,7 @@
                     $valor2 = $_POST['valor2'];
                     $sub = $valor1 - $valor2;
 
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "o primeiro valor é: $valor1 ";
                     echo "o segundo  valor é: $valor2 ";
                     echo "$valor1 + $valor2 = $sub<br>";
