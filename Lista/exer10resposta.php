@@ -16,6 +16,7 @@
                     $largura = $_POST['l'];
                     $altura = $_POST['a'];
                     $perimetro = 2 * ($largura + $altura);
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "para altura $largura e largura $altura,<br>";
                     echo "O perímetro do retângulo é: $perimetro<br>";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';

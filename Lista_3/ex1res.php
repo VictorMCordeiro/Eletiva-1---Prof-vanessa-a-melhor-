@@ -3,29 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>listas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body class="content mt-4">
-    <h1>Resposta do exercicio 8</h1>
+  <body class="container mt-4">
+    <h1>Resposta exer1</h1>
         <?php
+            function manipularString($palavra) : void
+            {
+                echo" A palavra possui ". strlen($palavra) ." caracteres ";
+            }
+           
+            
             if($_SERVER['REQUEST_METHOD']=='POST') // ESSE VAI TER EM TODOS OS EXERCICIOS
             {
                 try
                 {
-                    $al = $_POST['al'];
-                    $la = $_POST['la'];
-                    $area = $al *$la;
-                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
-                    echo "para altura $al e largura $la,";
-                    echo " São : $area metros quadrados.<br>";
+                    echo "<div class='alert alert-success'><strong>Solução:</strong><br>";
+                    $palavra = $_POST["p"];//nativa php pra transformar em int
+                    manipularString(strtolower(($palavra)));
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
-                }
+
+                  }               
                 catch(Exception $e)
                 { 
-                    echo $e->getMessage();
+                    echo "<div class='alert alert-danger'>Erro: " . $e->getMessage() . "</div>";
                 }
-            }
+                }
         ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

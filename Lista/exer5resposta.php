@@ -18,7 +18,7 @@
                     $n3 = $_POST['n3']; 
                     $soma = $n1 + $n2 +$n3;
                     $media = $soma / 3;
-
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "Notas digitadas em ordem: $n1 + $n2 + $n3 = $soma  .";
                     echo ".  A media das notas é: $media<br>";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';

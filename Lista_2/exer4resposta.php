@@ -6,24 +6,33 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body class="content mt-4">
-    <h1>Resposta do exercicio 8</h1>
+  <body class="container mt-4">
+    <h1>Resposta do exercicio 4, lista 2</h1>
         <?php
             if($_SERVER['REQUEST_METHOD']=='POST') // ESSE VAI TER EM TODOS OS EXERCICIOS
             {
                 try
                 {
-                    $al = $_POST['al'];
-                    $la = $_POST['la'];
-                    $area = $al *$la;
-                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
-                    echo "para altura $al e largura $la,";
-                    echo " São : $area metros quadrados.<br>";
+                    $valor = $_POST['p'];                    
+
+                    if($valor > 100) 
+                    {
+                        $desconto = $valor * (15/100);
+                        $corrigido = $valor - $desconto;
+                    }                    
+                    else 
+                    {
+                        $corrigido = $valor;
+                    }
+                    
+                    echo "<div class='alert alert-success'><strong>Desconto de 15%:</strong><br>";
+                    echo "De $valor para $corrigido, desconto de $desconto reais<br>";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
-                }
+
+            }
                 catch(Exception $e)
                 { 
-                    echo $e->getMessage();
+                    echo "<div class='alert alert-danger'>Erro: " . $e->getMessage() . "</div>";
                 }
             }
         ?>

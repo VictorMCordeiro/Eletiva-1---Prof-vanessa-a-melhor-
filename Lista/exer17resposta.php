@@ -18,7 +18,7 @@
 
                 $jtotal = $c * (($j / 100) * $p);
                 $m = $c + $jtotal;
-                
+                echo "<div class='alert alert-success'><strong>Resultado:</strong><br>"; 
                 echo "Para um capital de R$$c com juros a $j% por $p mese(s), seu juros é de R$$jtotal montante é R$$m<br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {

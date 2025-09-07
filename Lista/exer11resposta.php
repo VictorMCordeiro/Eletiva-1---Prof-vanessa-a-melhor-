@@ -15,6 +15,7 @@
                 {
                     $raio = $_POST['r'];
                     $perimetro = 2 * pi() * $raio;
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "O perímetro do círculo é: $perimetro <br>";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';                                                    
                 }

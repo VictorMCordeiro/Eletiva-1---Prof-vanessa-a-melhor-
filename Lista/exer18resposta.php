@@ -22,6 +22,7 @@
                 $jtotal_format = number_format($jtotal, 2, ',', '.');
 
                 $m_format = number_format($m, 2, ',', '.');
+                echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                 echo "Para um capital de R$$c com juros a $j% por $p mese(s), seu juros é de R$$jtotal_format e o montante é R$$m_format<br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {

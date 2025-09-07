@@ -16,6 +16,7 @@
                 $a = $_POST['al'];
                 $imc = $kg / (float)$a**2;
                 $imc_f = number_format($imc, 2, ',', '.');
+              echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                 echo "Para o poso $kg e altura $a, o IMC é $imc_f<br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {

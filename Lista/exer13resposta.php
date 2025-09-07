@@ -14,6 +14,7 @@
             try {
                 $m = $_POST['m'];
                 $r = $m * 100;
+                echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                 echo "$m metro(s) são $r centrimetro(s) <br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {

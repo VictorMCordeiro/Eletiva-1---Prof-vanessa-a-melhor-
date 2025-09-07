@@ -16,6 +16,7 @@
                 $pd = $_POST['pd'];
                 $d = $p * ($pd / 100);
                 $r = $p - ($p * ($pd / 100));
+                echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                 echo "Para o preço R$$p seu desconto é de $d, Preço final = R$$r <br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {

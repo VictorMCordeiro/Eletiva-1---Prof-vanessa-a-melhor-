@@ -15,6 +15,7 @@
                 {
                     $tf = $_POST['tf'];
                     $tc = $tf - 32;
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "$tf Fahrenheit são: $tc em C°<br>";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
                 }

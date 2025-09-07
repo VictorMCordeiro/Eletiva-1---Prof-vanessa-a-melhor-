@@ -17,7 +17,8 @@
                     $valor1 = $_POST['valor1'];
                     $valor2 = $_POST['valor2'];
                     $mult = $valor1 * $valor2;
-
+                    
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "o primeiro valor é: $valor1 ";
                     echo "   o segundo  valor é: $valor2 ";
                     echo "   $valor1 x $valor2 = $mult<br>";

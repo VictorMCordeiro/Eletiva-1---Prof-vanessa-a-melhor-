@@ -6,35 +6,36 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body class="content mt-4">
-    <h1>Resposta do exercicio 3</h1>
+  <body class="container mt-4">
+    <h1>Resposta do exercicio 8, lista 2</h1>
         <?php
-            if($_SERVER['REQUEST_METHOD']=='POST') // ESSE VAI TER EM TODOS OS EXERCICIOS
+            if($_SERVER['REQUEST_METHOD']=='POST') 
             {
                 try
                 {
-                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
-                    $valor1 = $_POST['valor1'];
-                    $valor2 = $_POST['valor2'];
-                    echo "o primeiro valor é: $valor1 ";
-                    echo "   o segundo  valor é: $valor2 ";
-                    if ($valor2 == 0) 
+                    $number = $_POST["n"];
+                    if ($number > 0) 
                     {
-                        echo "Erro: Divisão por zero.";
-                    } 
-                    else {
-                        $div = $valor1 / $valor2;
-                        echo "$valor1 % $valor2 = ";
-                        echo "$div<br>";
+                        echo "<div class='alert alert-success'><strong>Solução:</strong><br>";
+                        echo "A regressiva de $number até 1:";
+                        $cont = $number;
+                        do 
+                        {
+                            echo $cont;
+                            $cont--;                    
+                        } while ($cont >= 1);
+                    } else 
+                    {
+                        echo "<h2>Por favor, insira um número maior que zero.</h2>";
                     }
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
 
-                }
+                }               
                 catch(Exception $e)
                 { 
-                    echo $e->getMessage();
+                    echo "<div class='alert alert-danger'>Erro: " . $e->getMessage() . "</div>";
                 }
-            }
+                }
         ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

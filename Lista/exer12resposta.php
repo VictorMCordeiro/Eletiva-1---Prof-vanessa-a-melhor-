@@ -15,6 +15,7 @@
                 $b = $_POST['base'];
                 $e = $_POST['ex'];
                 $r = $b ** $e;
+                echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                 echo "$b ^ $e = $r <br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {

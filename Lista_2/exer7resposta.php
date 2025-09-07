@@ -6,26 +6,34 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body class="content mt-4">
-    <h1>Resposta do exercicio 8</h1>
+  <body class="container mt-4">
+    <h1>Resposta do exercicio 7, lista 2</h1>
         <?php
             if($_SERVER['REQUEST_METHOD']=='POST') // ESSE VAI TER EM TODOS OS EXERCICIOS
             {
                 try
                 {
-                    $al = $_POST['al'];
-                    $la = $_POST['la'];
-                    $area = $al *$la;
-                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
-                    echo "para altura $al e largura $la,";
-                    echo " São : $area metros quadrados.<br>";
+                    $valor = $_POST['n'];     
+                   
+                    echo "<div class='alert alert-success'><strong>Solução:</strong><br>";
+                    echo "Números somados de 1 até $valor: ";
+                    //declarar antes para o while
+                    $acu = 0;
+                    $i = 1;
+                    while ($i <= $valor)
+                    {
+                        $acu = $i + $acu;
+                        $i++;
+                    }  
+                    echo " $acu";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
-                }
+
+                  }
                 catch(Exception $e)
                 { 
-                    echo $e->getMessage();
+                    echo "<div class='alert alert-danger'>Erro: " . $e->getMessage() . "</div>";
                 }
-            }
+                }
         ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

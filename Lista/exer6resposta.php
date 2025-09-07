@@ -15,6 +15,7 @@
                 {
                     $tc = $_POST['tc'];
                     $tf = $tc + 32;
+                    echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                     echo "$tc C° são: $tf em F°<br>";
                     echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
 

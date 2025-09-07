@@ -17,6 +17,7 @@
 
                 // Limita o resultado para 2 casas decimais
                 $r_formatado = number_format($r, 2, ',', '.');
+                echo "<div class='alert alert-success'><strong>Resultado:</strong><br>";
                 echo "$km kilometro(s) são $r_formatado Milhas(s) <br>";
                 echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
             } catch (Exception $e) {
