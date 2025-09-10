@@ -12,17 +12,17 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST') // ESSE VAI TER EM TODOS OS EXERCICIOS
         {
             try {
-                echo "<div class='alert alert-success'><strong>Solução:</strong><br>";
-                $num = $_POST["n"];
-                $fatorial = 1;
-                for ($i = 1; $i <= $num; $i++) {
-                    $fatorial = $fatorial * $i;
-                } {
-                    echo "a fatoria de $num é :$fatorial";
-                }
-                echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
+                  echo "<div class='alert alert-success'><strong>Solução:</strong><br>";
+                  $num = $_POST["n"];
+                  $fatorial = 1;
+                  for ($i = 1; $i <= $num; $i++) {
+                    $fatorial *= $i;
+                  }
 
-          } catch (Exception $e) {
+                  echo "O fatorial de $num é: $fatorial<br>";
+                  echo '<button type="button" onclick="history.go(-1)" class="btn btn-primary">Voltar</button>';
+
+                } catch (Exception $e) {
                 echo "<div class='alert alert-danger'>Erro: " . $e->getMessage() . "</div>";
             }
         }
